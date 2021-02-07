@@ -1,0 +1,137 @@
+
+<style>
+    .form-control{
+        border:none;
+        border-bottom: 1px solid #ced4da;
+        border-radius: 0%;
+         
+    }
+      
+</style>
+<div class="header">
+   
+        <div style="color: #f0f1f3;"><h2> Email</h2></div>
+     
+
+</div>
+<div class="container">
+    
+    <div class="row" >
+        <div class="col-md-6 offset-3 fm">
+           <div style="opacity: 200;">
+            <form [formGroup]="emailForm"  action="" >
+                <div class="input-box" >
+                    <label for="to">To:</label>
+                    <input type="email" formControlName='emailId' class="form-control bg" name="to">
+                     
+                </div>
+                <div class="input-box" >
+                    <label for="cc">CC:</label>
+                    <input type="email" formControlName='cc' class="form-control bg" name="cc">
+                </div>
+                <div class="input-box">
+                    <label for="subject">Sub:</label>
+                    <input type="email" formControlName='subject' class="form-control bg" name="subject">
+                </div>
+                <div>
+                    <br>
+                    <!-- <textarea id="id01" name="body" style="box-shadow: none;" formControlName='body' cols="92" rows="10"></textarea>
+                    <div style="position: absolute;border: black; float: right;">
+                        <button class="btn btn-primary" onclick="document.getElementById('myP').value.style.textDecoration = 'underline'">Bold</button> -->
+                        
+                    <!-- </div> -->
+                   
+        <!-- <textarea cols="92" rows="10" formControlName="text" > 
+           
+        </textarea> -->
+                   <iframe name="richTextField" formControlName="text" class="richText bg"></iframe>
+        
+                    <div style="width:100%">
+                        <button onclick="execCmd('undo')"><i class="fa fa-undo"></i></button>
+                        <button onclick="execCmd('redo')"><i class="fa fa-repeat"></i></button>    
+                        <button onclick="execCmd('bold')"><i class="fa fa-bold"></i></button>
+                        <button onclick="execCmd('indent')"><i class="fa fa-indent"></i></button>
+                        <button onclick="execCmd('outdent')"><i class="fa fa-dedent"></i></button>
+                        <button onclick="execCmd('insertUnorderedList')"><i class="fa fa-list-ul"></i></button>
+                        <button onclick="execCmd('insertOrderedList')"><i class="fa fa-list-ol"></i></button>
+                        <button onclick="execCmd('underline')"><i class="fa fa-underline"></i></button>
+                        <button onclick="execCmd('italic')"><i class="fa fa-italic"></i></button>
+                        <button onclick="execCmd('justifyLeft')"><i class="fa fa-align-left"></i></button>
+                        <button onclick="execCmd('justifyCenter')"><i class="fa fa-align-center"></i></button>
+                        <button onclick="execCmd('justifyFull')"><i class="fa fa-align-justify"></i></button>
+                        <button onclick="execCmd('justifyRight')"><i class="fa fa-align-right"></i></button>
+                        <button onclick="execCmd('strike')"><i class="fa fa-strikethrough"></i></button>
+                        <button onclick="execCmd('superscript')"><i class="fa fa-superscript"></i></button>
+                        <button onclick="execCmd('subscript')"><i class="fa fa-subscript"></i></button>
+        
+                        
+                        <button><i class="fa fa-font"><select  onchange="execCommandWithArg('fontSize',this.value)">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select></i>  
+                            
+                        </button>
+        
+                        <button onclick="execCmd('insertHorizontalRule')">HR</button>
+                        <select onclick="execCommandWithArg('formatBlock',this.value)">
+                            <option value="H1">H1</option>
+                            <option value="H2">H2</option>
+                            <option value="H3">H3</option>
+                            <option value="H4">H4</option>
+                            <option value="H5">H5</option>
+                            <option value="H6">H6</option>
+                            <option value="H7">H7</option>
+                        </select>
+        
+                        <select onchange="execCommandWithArg('fontName',this.value)">
+                            <option value="Arial">Arial</option>
+                            <option value="Comic Sans MS">Comic Sans MS </option>
+                            <option value="Courier">Courier</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Times Now Roman">Times Now Roman</option>
+                            <option value="Tahoma">Tahoma </option>
+                            <option value="Verdana">Verdana</option>
+                        </select>
+                        
+                    
+                            Text Color<input type="color" onchange="execCommandWithArg('foreColor',this.value)">
+                            Background Color<input type="color" onchange="execCommandWithArg('hiliteColor',this.value)">
+                        
+                        
+                        
+                        
+        
+                    </div> 
+        
+                       
+                </div>
+                <div>
+                    <button class="btn btn-primary"(click)="send()" >Send</button>
+                </div>
+            </form>
+
+           </div>
+           
+           
+           
+        </div>    
+       </div>
+       
+    
+</div>
+
+
+<footer class="footer">
+    <p class="footer__title">Saurav Chaurasia</p>
+    <div class="footer__social">
+        <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+        <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+        <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+    </div>
+    <p>&#169; 2015 copyright all right reserved</p>
+  </footer>
